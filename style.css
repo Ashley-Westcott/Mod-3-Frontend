@@ -13,3 +13,12 @@ h1 {
        left: 25%;
        /* transform: translate(-50%, -50%); */
 }
+
+#cupid {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  left: 80px;
+  top: 450px;
+  /* background-color: red; */
+}
