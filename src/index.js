@@ -3,7 +3,7 @@
 
 /* src/index.js */
 // document.addEventListener('DOMContentLoaded', () => {
-  
+
 // let cupidInterval
 
 
@@ -12,26 +12,26 @@
     .then(res => res.json())
     .then(json => console.log(json));
 
-    
+  // display cupid and move left and right
 
 
-  // display cupit and move left and right
- 
+
   function init(){
          const cupid = document.getElementById('cupid')
+
          cupid.style.position='relative';
          cupid.style.left='180px';
          cupid.style.top='460px';
      }
- 
+
   init()
- 
+
   function moveLeft(){
     if (cupid.offsetLeft > -5) {
     cupid.style.left=parseInt(cupid.style.left)-15 + 'px';
   }
 }
- 
+
   function moveRight(){
     if (cupid.offsetLeft < 510) {
     cupid.style.left=parseInt(cupid.offsetLeft)+15 + 'px';
@@ -39,7 +39,6 @@
 }
 
 
- 
 
   function letCupidMove(event) {
     if (event.key === "ArrowLeft") {
@@ -58,66 +57,94 @@
   window.addEventListener("keydown", letCupidMove)
 
 
-  
-  
 
-
-
-
-// const startButton = document.getElementById("start-button")
-
-
-
-
-//   function arrow(){
-//     let arrow= createArrowElement()
-//     gameArea.appendChild(arrow)
-//     cupid.style.position='relative';
-//     cupid.style.left='180px';
-//     cupid.style.top='460px';
-// }
-
-// init()
-
-
-
-  // const gameArea= document.getElementById('video-game-area')
-
-  // function shootArrow(){
-  //   let arrow = createArrowElement ()
-  //   gameArea.appendChild(arrow)
-  //   moveaArrow(arrow)
-  // }
-
-
-  
   // function createHeart() {
   //   let newHeart = document.createElement('img')
-  //   newHeart.src = 'images/heart.png'
+  //   let heart = "images/heart.png"
+  //   newHeart.src = heart
+  //   newHeart.id = "newheart1"
+  //   newHeart.style.width = "40px"
+  //   newHeart.style.height = "40px"
   //   newHeart.classList.add('heart')
-  //   newHeart.classList.add('heart-transition')
-  //   newHeart.style.top = '370px'
-  //   newHeart.style.bottom = `${Math.floor(Math.random() * 330) + 30}px`
-  //   mainPlayArea.appendChild(newHeart)
-  //   moveHeart(newHeart)
+  //   newHeart.style.top = '100px'
+  //   newHeart.style.left = `${Math.floor(Math.random() * 330) +30}px`
+  //   gameContainer.appendChild(newHeart)
   // }
-
-  // startButton.addEventListener("click", (event) => {
-  //   playGame()
-  // })
-
-  // function playGame() {
-  //   startButton.style.display = 'none'
-  //   instructions.style.display = 'none'
-  //   window.addEventListener("keydown", letHeartsFall)
-  //   // justice = new Audio("audio/Justice-One-Minute-To-Midnight.m4a")
-  //   // justice.play()
-  //   cupidInterval = setInterval(() => { 
-  //     createHeart() 
-  //   }, 2100)
-
-  // }
-  
-  
+  //
+  // createHeart()
 
 
+    const FALLING_HEARTS = [];
+    const gameContainer = document.getElementById("video-game-area")
+    // const arrowTransform = 'rotate(90deg)'
+    // heart.style.transform = heartTransform
+
+
+    function createHeart() {
+      // let div = document.createElement('div')
+      // div.setAttribute('class', 'heartDiv');
+      // gameContainer.appendChild(div)
+      let heart = document.createElement('IMG');
+      heart.id = 'heart';
+      heart.setAttribute('src', 'images/heart.png');
+      heart.style.width = "40px";
+      heart.style.height = "40px";
+      heart.style.top = '0px';
+      heart.style.position = "absolute";
+      FALLING_HEARTS.push(heart);
+      gameContainer.appendChild(heart)
+    }
+
+    createHeart()
+
+    function moveHeart(heart) {
+      let topNum = parseInt(heart.style.top);
+      if (topNum > 440) {
+        //610 for 10
+          heart.remove();
+          return heart;
+      } else {
+      setTimeout(() => {
+          topNum += 4;
+          heart.style.top = topNum + 'px';
+          // debugger
+          moveHeart(heart)
+        }, 70)
+      }
+    }
+    let heart = document.getElementById('heart')
+    console.log(heart);
+    moveHeart(heart)
+    //
+    // // generate random arrow
+    // function createRandomHeart(){
+    //   let randomHeart = Math.floor(Math.random() * 4) + 1;
+    //   switch (randomHeart){
+    //     case 1:
+    //       createHeart();
+    //       break;
+    //   }
+    //
+    // }
+    //
+    //   //set interval to generate random arrow to beat of music
+    // setInterval(()=>{
+    //   createRandomHeart();
+    //   console.log("heart")
+    //
+    //   // drop arrows
+    //   function dropHearts() {
+    //     FALLING_HEARTS.forEach((heart) => {
+    //       gameContainer.appendChild(heart);
+    //       const heartFalling = document.querySelector('#heart');
+    //       let heartId = heart.id
+    //         switch (heartId) {
+    //           case 'heart':
+    //             moveHeart(heartFalling);
+    //             break;
+    //         }
+    //     })
+    //   }
+    //
+    //   dropHearts()
+    // })
