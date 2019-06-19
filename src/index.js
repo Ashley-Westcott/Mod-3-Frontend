@@ -100,14 +100,12 @@
     function moveHeart(heart) {
       let topNum = parseInt(heart.style.top);
       if (topNum > 440) {
-        //610 for 10
           heart.remove();
           return heart;
       } else {
       setTimeout(() => {
           topNum += 4;
           heart.style.top = topNum + 'px';
-          // debugger
           moveHeart(heart)
         }, 70)
       }
