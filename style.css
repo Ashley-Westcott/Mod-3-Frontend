@@ -1,66 +1,71 @@
 h1 {
-  color: blue;
+ color: blue;
 }
 
 #video-game-area {
-      /* display: block;
-      margin-left: auto;
-      margin-right: auto; */
-      width: 40px;
-      height: 40px;
-      position: relative;
-      left: 20px;
-      top: 100px;
-       /* transform: translate(-50%, -50%); */
+     /* display: block;
+     margin-left: auto;
+     margin-right: auto; */
+     width: 600px;
+     height: 600px;
+     position: absolute;
+     /* left: 20px;
+     top: 100px; */
+      /* transform: translate(-50%, -50%); */
 }
 div {
-  display: block;
+ display: block;
+}
+
+.heartDiv {
+  width: 500px;
+  height: 500px
 }
 
 #cupid {
-  width: 60px;
-  height: 60px;
-  position: relative;
-  left: -5px;
-  top: 460px;
-  bottom: 180px; 
-  /* background-color: red; */
+ width: 60px;
+ height: 60px;
+ position: relative;
+ left: -5px;
+ top: 460px;
+ bottom: 180px;
+ /* background-color: red; */
 }
-
+/*
 .arrow {
-  width: 20px;
-  height: 20px;
-  position: relative;
+ width: 20px;
+ height: 20px;
+ position: relative;
 }
 
-body { 
-  display: block;
-  margin: 8px;
-  margin-top: 8px;
-  margin-right: 8px;
-  margin-bottom: 8px;
-  margin-left: 8px;
-} 
+body {
+ display: block;
+ margin: 8px;
+ margin-top: 8px;
+ margin-right: 8px;
+ margin-bottom: 8px;
+ margin-left: 8px;
+}
 #start-button {
-  position: relative;
-  color: white;
-  left: 140px;
-  top: 80px;
-  text-shadow: 2px 2px black;
+ position: relative;
+ color: white;
+ left: 140px;
+ top: 80px;
+ text-shadow: 2px 2px black;
 }
 
 #start-button:hover {
-  cursor: pointer;
+ cursor: pointer;
 }
 .heart-transition {
-  opacity: 1;
-  transition: opacity 1.5s ease-out;
+ opacity: 1;
+ transition: opacity 1.5s ease-out;
 }
 
 #instructions-text {
-  position: relative;
-  color: white;
-  left: 35px;
-  top: 0px;
-  text-shadow: 2px 2px black;
-}
+ position: relative;
+ color: white;
+ left: 35px;
+ top: 0px;
+ text-shadow: 2px 2px black;
+} */
