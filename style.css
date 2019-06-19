@@ -6,19 +6,61 @@ h1 {
       /* display: block;
       margin-left: auto;
       margin-right: auto; */
-       width: 100%;
-       height: auto;
-       position: absolute;
-       top: 20%;
-       left: 25%;
+      width: 40px;
+      height: 40px;
+      position: relative;
+      left: 20px;
+      top: 100px;
        /* transform: translate(-50%, -50%); */
+}
+div {
+  display: block;
 }
 
 #cupid {
   width: 60px;
   height: 60px;
   position: relative;
-  left: 80px;
-  top: 450px;
+  left: -5px;
+  top: 460px;
+  bottom: 180px; 
   /* background-color: red; */
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+body { 
+  display: block;
+  margin: 8px;
+  margin-top: 8px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  margin-left: 8px;
+} 
+#start-button {
+  position: relative;
+  color: white;
+  left: 140px;
+  top: 80px;
+  text-shadow: 2px 2px black;
+}
+
+#start-button:hover {
+  cursor: pointer;
+}
+.heart-transition {
+  opacity: 1;
+  transition: opacity 1.5s ease-out;
+}
+
+#instructions-text {
+  position: relative;
+  color: white;
+  left: 35px;
+  top: 0px;
+  text-shadow: 2px 2px black;
 }
