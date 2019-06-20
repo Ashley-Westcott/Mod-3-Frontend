@@ -38,6 +38,10 @@ div {
  position: relative;
 }
 
+.monster-transition {
+  opacity: 1;
+  transition: opacity 1.5s ease-out;
+}
 body {
  display: block;
  margin: 8px;
@@ -69,3 +73,13 @@ body {
  top: 0px;
  text-shadow: 2px 2px black;
 } */
+.heart-transition {
+  opacity: 1;
+  transition: opacity 1.5s ease-out;
+}
+.bottom-heart {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  opacity: 0;
+}
